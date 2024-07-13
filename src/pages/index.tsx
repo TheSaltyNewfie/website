@@ -48,6 +48,9 @@ export default function IndexPage() {
             </CardBody>
           </Card>
         </div>
+        <p>
+          :
+        </p>
       </section>
     </DefaultLayout>
   );
