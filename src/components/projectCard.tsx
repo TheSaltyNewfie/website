@@ -31,12 +31,12 @@ export default function ProjectCard({ title, description, link, isLive, liveLink
             <CardBody>{description}</CardBody>
 
             <CardFooter className="gap-4">
-                <Button href={link} color="primary" size="md" onClick={() => window.location.href = link}>
+                <Button href={link} color="primary" size="md" onClick={() => window.open(link, "_blank")}>
                     View Project
                 </Button>
 
                 {isLive ? (
-                    <Button href={liveLink} color="success" size="md" onClick={() => window.location.href = liveLink}>
+                    <Button href={liveLink} color="success" size="md" onClick={() => window.open(liveLink, "_blank")}>
                         Live Site
                     </Button>
                 ) : (

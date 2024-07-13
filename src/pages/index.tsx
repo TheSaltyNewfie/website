@@ -36,7 +36,7 @@ export default function IndexPage() {
             GitHub
           </Link>
         </div>
-        <div>
+        <div className="flex flex-col gap-4">
           <Card>
             <CardBody>
               <h4 className="text-center mt-2 text-lg leading-snug max-w-2xl">
@@ -47,10 +47,14 @@ export default function IndexPage() {
               </h4>
             </CardBody>
           </Card>
+          <Card>
+            <CardBody>
+              <h4 className="text-center mt-2 text-lg leading-snug max-w-2xl">
+                Fun fact: When this <span className="text-blue-500 cursor-pointer" onClick={() => window.open(siteConfig.links.github, "_blank")}>repo</span> gets an update on main, it auto updates :)
+              </h4>
+            </CardBody>
+          </Card>
         </div>
-        <p>
-          :
-        </p>
       </section>
     </DefaultLayout>
   );
