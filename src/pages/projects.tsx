@@ -24,15 +24,15 @@ export default function ProjectsPage() {
             link="https://github.com/TheSaltyNewfie/Web-Password-Manager"
             isLive={false}
             liveLink=""
-            tags={["NextJS", "Typescript", "Python", "Flask", "SocketIO"]}
+            tags={["HTML", "CSS", "JavaScript", "MongoDB", "Express"]}
           />
           <ProjectCard
             title="KV-RAT-CPP"
-            description="A long-standing research project, originally in Python and rewritten in C++. It's a RAT for remote computer control but with features to only mess with the client as a joke."
+            description="A long-standing research project, originally in Python and rewritten in C++. It's a RAT for remote computer control but with features to only mess with the client as a joke. It also compiles via linux to windows!"
             link="https://github.com/TheSaltyNewfie/KV-RAT-CPP"
             isLive={false}
             liveLink=""
-            tags={["NextJS", "Typescript", "Python", "Flask", "SocketIO"]}
+            tags={["C++", "Winsock2", "Sockets"]}
           />
         </div>
         <div className="inline-block max-w-lg text-center justify-center mt-8">

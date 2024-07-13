@@ -19,11 +19,11 @@ export default function ProjectCard({ title, description, link, isLive, liveLink
 
     return (
         <Card className="w-80 h-80">
-            <CardHeader className="flex flex-col">
-                <h1 className="text-2xl mb-2">{title}</h1>
-                <div className="flex flex-wrap gap-2">
+            <CardHeader className="flex flex-col items-center">
+                <h1 className="text-2xl mb-2 text-center">{title}</h1>
+                <div className="flex flex-wrap gap-2 self-start">
                     {tags.map((tag) => (
-                        <Chip key={tag} color="primary">{tag}</Chip>
+                        <Chip key={tag} color="default">{tag}</Chip>
                     ))}
                 </div>
             </CardHeader>
