@@ -16,6 +16,7 @@ export default function ProjectsPage() {
             link="https://github.com/thesaltynewfie/communication-app"
             isLive={true}
             liveLink="https://site.thesaltynewfie.ca"
+            tags={["Typescript", "NextUI", "Python", "Flask", "SocketIO"]}
           />
           <ProjectCard
             title="Web Password Manager"
@@ -23,6 +24,7 @@ export default function ProjectsPage() {
             link="https://github.com/TheSaltyNewfie/Web-Password-Manager"
             isLive={false}
             liveLink=""
+            tags={["NextJS", "Typescript", "Python", "Flask", "SocketIO"]}
           />
           <ProjectCard
             title="KV-RAT-CPP"
@@ -30,6 +32,7 @@ export default function ProjectsPage() {
             link="https://github.com/TheSaltyNewfie/KV-RAT-CPP"
             isLive={false}
             liveLink=""
+            tags={["NextJS", "Typescript", "Python", "Flask", "SocketIO"]}
           />
         </div>
         <div className="inline-block max-w-lg text-center justify-center mt-8">
