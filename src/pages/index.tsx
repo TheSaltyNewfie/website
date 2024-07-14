@@ -49,7 +49,7 @@ export default function IndexPage() {
           </Card>
           <Card>
             <CardBody>
-              <h4 className="text-center mt-2 text-lg leading-snug max-w-2xl">
+              <h4 className="text-center text-lg leading-snug max-w-2xl">
                 Fun fact: When this <span className="text-blue-500 cursor-pointer" onClick={() => window.open(siteConfig.links.github, "_blank")}>repo</span> gets an update on main, it auto updates :)
               </h4>
             </CardBody>
