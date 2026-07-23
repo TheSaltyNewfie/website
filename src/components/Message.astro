@@ -1,0 +1,77 @@
+<script>
+  const form = document.querySelector<HTMLFormElement>('#contact-form');
+  const statusElement =
+    document.querySelector<HTMLParagraphElement>('#form-status');
+  const submitBtn = form?.querySelector<HTMLButtonElement>(
+    'button[type="submit"]'
+  );
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!statusElement || !submitBtn) return;
+
+    const formData = new FormData(form);
+
+    submitBtn.disabled = true;
+    statusElement.textContent = 'Sending...';
+    statusElement.className = 'text-sm text-gray-300';
+
+    try {
+      const res = await fetch('/api/notify', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`);
+      }
+
+      statusElement.textContent = 'Message sent!';
+      statusElement.className = 'text-sm text-green-400';
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      statusElement.textContent =
+        'Something went wrong, try again in a little bit.';
+      statusElement.className = 'text-sm text-red-400';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
+<div
+  class="bg-[#343232] flex flex-col rounded-lg p-4 h-fit w-full items-start shadow-lg"
+>
+  <p class="text-2xl">Want to send me a message?</p>
+  <form id="contact-form" class="flex flex-col gap-2 items-start p-2 w-full">
+    <input
+      type="email"
+      name="email"
+      placeholder="you@email.com"
+      class="bg-[#3C3A3A] border-[#4A4747] border-2 rounded-sm w-full"
+    />
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      class="bg-[#3C3A3A] border-[#4A4747] border-2 rounded-sm w-full"
+    />
+    <textarea
+      name="message"
+      placeholder="Message"
+      rows="5"
+      class="w-full resize-y bg-[#3C3A3A] border-[#4A4747] border-2 rounded-sm"
+    ></textarea>
+    <button
+      type="submit"
+      class="bg-[#3C3A3A] border-[#4A4747] border-2 rounded-sm p-2 hover:underline cursor-pointer"
+      >Send</button
+    >
+
+    <p id="form-status" class="text-sm min-h-5"></p>
+  </form>
+
+  <p>I will do my best to reply to you ASAP!</p>
+</div>
