@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml* ./
 RUN pnpm install --frozen-lockfile --dangerously-allow-all-builds
 
-FROM base as builder
+FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
