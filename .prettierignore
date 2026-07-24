@@ -1,0 +1,5 @@
+public/
+node_modules/
+README.md
+astro.config.mjs
+pnpm-lock.yaml
