@@ -12,6 +12,15 @@ export default defineConfig({
 
   output: "server",
 
+  security: {
+    allowedDomains: [
+      {
+        hostname: 'thesaltynewfie.ca',
+        protocol: 'https'
+      }
+    ],
+  },
+
   adapter: node({
     mode: "standalone",
   }),
