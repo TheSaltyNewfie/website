@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+
+const { title } = Astro.props;
+---
+
+<html lang="en" class="bg-[#212020] text-[#ECEBE0]">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex min-h-svh flex-col">
+    <header class="w-full flex justify-center items-center mb-2">
+      <div class="p-2 flex flex-row space-x-4">
+        <p>
+          <a href="/blog" class="font-medium text-fg-brand hover:underline"
+            >Blog</a
+          >
+        </p>
+        <p>
+          <a href="/projects" class="font-medium text-fg-brand hover:underline"
+            >Projects</a
+          >
+        </p>
+      </div>
+    </header>
+
+    <main class="flex flex-col grow w-full">
+      <slot />
+    </main>
+
+    <footer class="bg-[#343232] w-full flex justify-center items-center mt-2">
+      <div class="p-2 flex flex-row space-x-4">
+        <p>
+          <a
+            href="https://github.com/TheSaltyNewfie"
+            class="font-medium text-fg-brand hover:underline">Github</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://github.com/TheSaltyNewfie/website"
+            class="font-medium text-fg-brand hover:underline">Source</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+<!--
+ -->
