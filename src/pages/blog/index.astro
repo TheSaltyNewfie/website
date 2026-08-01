@@ -6,11 +6,11 @@ const blogs = await getCollection("blog")
 ---
 
 <Layout title="blogs">
-    <div>
+    <div class="flex flex-col items-center">
         <ul>
             {blogs.map((index) => (
-                <li>
-                    <a href={`/blog/${index.id}`}>{index.data.title}</a>
+                <li class="text-2xl bg-[#343232] p-2 rounded-lg">
+                    <a class="font-medium text-fg-brand hover:underline" href={`/blog/${index.id}`}>{index.data.title}</a>
                 </li>
             ))}
         </ul>
